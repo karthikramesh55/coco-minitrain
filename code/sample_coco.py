@@ -35,7 +35,7 @@ def main(args=None):
 		# aa = Counter(v)
 		annot_dict[k] = len(v)
 
-	print annot_dict
+	print(annot_dict)
 
 	# fig = plt.figure()
 	# axes = fig.add_axes([0.1, 0.1, 0.8, 0.8])  # left, bottom, width, height (range 0 to 1)
@@ -67,7 +67,7 @@ def main(args=None):
 		else:
 			size_dict[kk] = 1
 
-	print size_dict
+	print(size_dict)
 
 	# now sample!!
 	imgs_list = []
@@ -110,7 +110,7 @@ def main(args=None):
 				else:
 					annot_sampled[kk] = 1
 
-		print annot_sampled
+		print(annot_sampled)
 
 		# calculate ratios
 		ratios_obj_count = {}
@@ -137,9 +137,10 @@ def main(args=None):
 			best_diff = diff
 			best_run_index = rr
 
-		print best_diff, best_run_index
+		print(best_diff)
+		print(best_run_index)
 
-	# print imgs_list[best_run_index]
+	# print(imgs_list[best_run_index])
 
 	# now write to csv file
 	csv_file = open("mscoco_sampled.csv", 'w')
@@ -161,14 +162,14 @@ def main(args=None):
 	# s = 0
 	# for key, val in dataset_train.coco.catToImgs.iteritems():
 	# 	s += len(val)
-	# print s # 604907
+	# print(s) # 604907
 
 	# maxx = 0
 	# for key, val in dataset_train.coco.catToImgs.iteritems():
 	# 	m = max(val)
 	# 	if m > maxx:
 	# 		maxx = m
-	# print maxx  # 581921
+	# print(maxx)  # 581921
 
 
 if __name__ == '__main__':
